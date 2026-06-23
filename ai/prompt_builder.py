@@ -6,15 +6,21 @@ def build_review_prompt(
     return f"""
 Review this code as a senior Team Lead.
 
-Review the code carefully and identify issues line by line.
+Report only issues that are directly supported by the code shown.
 
-For each issue found provide:
+For each issue provide:
 
 Issue:
 Code:
 Reason:
+Suggestion:
 
-Keep the reason short and easy to understand.
+Keep the reason and suggestion short and easy to understand.
+
+Do not provide suggested fixes.
+Do not provide final code.
+Do not assume missing code.
+Do not speculate.
 
 Code:
 
